@@ -11,12 +11,17 @@ module.exports = {
             title: "bla"
         })
     ],
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: "./dist",
+        hot: true
+    },
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: [".ts"]
+        extensions: ['.ts', '.js'],
     },
     module: {
         rules: [
